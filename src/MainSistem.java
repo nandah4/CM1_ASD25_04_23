@@ -24,8 +24,6 @@ public class MainSistem {
         serviceClass.tambahDataTransaksi(trp4);
         serviceClass.tambahDataTransaksi(trp5);
 
-        serviceClass.showBarang();
-
         while (true) {
             System.out.println("================= TOKO Manasuka TOKO =================");
             System.out.println("1. Data Barang");
@@ -35,6 +33,7 @@ public class MainSistem {
             System.out.println("5. exit");
             System.out.print("Choose Menu (1-5): ");
             int menu = sc.nextInt();
+            sc.nextLine();
 
             if (menu == 1) {
                 serviceClass.showBarang();
