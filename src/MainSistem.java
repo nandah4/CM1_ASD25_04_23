@@ -16,7 +16,7 @@ public class MainSistem {
         TransaksiPembelian trp4 = new TransaksiPembelian("Tr004", "MeiMei", "23-04-2024", 1, brg4);
         TransaksiPembelian trp5 = new TransaksiPembelian("Tr005", "Ihsan", "24-04-2024", 1, brg5);
 
-        ServiceClass serviceClass = new ServiceClass()
+        ServiceClass serviceClass = new ServiceClass();
 
         serviceClass.tambahDataTransaksi(trp1);
         serviceClass.tambahDataTransaksi(trp2);
@@ -32,26 +32,14 @@ public class MainSistem {
             System.out.println("4. Pengurutan Data");
             System.out.println("5. exit");
             System.out.print("Choose Menu (1-5): ");
-            int menu = 
-
+            int menu = sc.nextInt();
+            sc.nextLine();
                     
-            switch (menu) {
-                case 1:
-                    
-                    break;
-                case 2:
-                    serviceClass.searching(sc);
-                    break;
-                case 3:
+           if(menu == 1){
 
-                    break;
-                case 4:
-
-                    break;
-                case 5:
-                System.out.print("Kode Program Berhenti");
-                    return;
-            }
+           } else if(menu == 3) {
+                serviceClass.searching(sc);
+           }
         }
     }
 }

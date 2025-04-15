@@ -4,7 +4,6 @@ public class TransaksiPembelian {
     String tanggalPembelian;
     int qyt;
     Barang brg;
-    
 
     TransaksiPembelian(String kodeTransaksi, String namaPembeli, String tanggalPembelian, int qyt, Barang brg){
         this.kodeTransaksi = kodeTransaksi;

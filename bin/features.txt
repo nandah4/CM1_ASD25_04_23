@@ -1,0 +1,4 @@
+1. tampil data barang
+2. tampil data transaksi
+3. pencarian data / linear
+4. sorting data / bubble

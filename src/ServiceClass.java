@@ -4,7 +4,7 @@ public class ServiceClass {
     TransaksiPembelian[] trs = new TransaksiPembelian[5];
     int index = 0;
 
-}
+
 
 void tambahDataTransaksi(TransaksiPembelian trP) {
     if (index < trs.length) {
@@ -19,14 +19,12 @@ void searching(Scanner sc) {
     System.out.println("Cari Nama Pembeli: ");
     String nama = sc.nextLine();
 
-    int indexFound;
+    int indexFound = -1;
 
     for (int i = 0; i < trs.length; i++) {
         if (nama.equalsIgnoreCase(trs[i].namaPembeli)) {
             indexFound = i;
             break;
-        } else {
-            indexFound = -1;
         }
     }
 
@@ -44,3 +42,4 @@ void sorting() {
             }
         }
     }
+}
