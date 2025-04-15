@@ -1,8 +1,11 @@
+import java.lang.classfile.instruction.BranchInstruction;
 import java.util.Scanner;
 
 public class ServiceClass {
     TransaksiPembelian[] trs = new TransaksiPembelian[5];
+    Barang[] brg = new Barang[5];
     int index = 0;
+    int indexBrg = 0;
 
     void tambahDataTransaksi(TransaksiPembelian trP) {
         if (index < trs.length) {
@@ -13,13 +16,23 @@ public class ServiceClass {
         }
     }
 
-    void showBarang(){
+    // void tambahBarang(BranchInstruction brg) {
+    // if (index < brg.length) {
+    // brg[index] = trP;
+    // index++;
+    // } else {
+    // System.out.println("Data Penuh!");
+    // }
+    // }
+
+    void showBarang() {
         System.out.printf("%-20s %-20s %-20s %-20d %-20d", "Kode Barang", "Nama Barang", "Kategori", "Stock", "Harga");
         for (int i = 0; i < trs.length; i++) {
-    
+            trs[i].brg.tampilDataBarang();
         }
 
     }
+
     void searching(Scanner sc) {
         System.out.println("Cari Nama Pembeli: ");
         String nama = sc.nextLine();
