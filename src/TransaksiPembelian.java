@@ -4,6 +4,7 @@ public class TransaksiPembelian {
     String tanggalPembelian;
     int qyt;
     Barang brg;
+    
 
     TransaksiPembelian(String kodeTransaksi, String namaPembeli, String tanggalPembelian, int qyt, Barang brg){
         this.kodeTransaksi = kodeTransaksi;
@@ -14,7 +15,7 @@ public class TransaksiPembelian {
     }
 
     void tampilDataTransaksi(){
-        System.out.printf("%-20s %-20s %-20s %-20s %-20d", this.kodeTransaksi, this.namaPembeli, this.tanggalPembelian, this.brg, this.qyt);
+        System.out.printf("%-20s %-20s %-20s %-20s %-20d %-20s", this.kodeTransaksi, this.namaPembeli, this.tanggalPembelian, this.brg.nama, this.qyt, this.brg.harga);
     }
 }
 

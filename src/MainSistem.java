@@ -10,6 +10,12 @@ public class MainSistem {
         Barang brg4 = new Barang("Br004", "Rinso Cair", "Sabun", 10, 7000);
         Barang brg5 = new Barang("Br005", "Leo Kripik", "Sabun", 10, 1000);
 
+        TransaksiPembelian trp1 = new TransaksiPembelian("Tr001", "Santi", "21-04-2024", 1, brg1);
+        TransaksiPembelian trp2 = new TransaksiPembelian("Tr002", "Vani", "21-04-2024", 2, brg2);
+        TransaksiPembelian trp3 = new TransaksiPembelian("Tr003", "Siska", "23-04-2024", 3, brg3);
+        TransaksiPembelian trp4 = new TransaksiPembelian("Tr004", "MeiMei", "23-04-2024", 1, brg4);
+        TransaksiPembelian trp5 = new TransaksiPembelian("Tr005", "Ihsan", "24-04-2024", 1, brg5);
+
         while (true) {
             System.out.println("================= TOKO Manasuka TOKO =================");
             System.out.println("1. Data Barang");
