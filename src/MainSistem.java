@@ -12,6 +12,7 @@ public class MainSistem {
 
         while (true) {
             System.out.println("================= TOKO Manasuka TOKO =================");
+            System.out.println("1. Data Barang");
         }
     }
 }
