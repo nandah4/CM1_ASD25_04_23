@@ -13,6 +13,13 @@ public class ServiceClass {
         }
     }
 
+    void showBarang(){
+        System.out.printf("%-20s %-20s %-20s %-20d %-20d", "Kode Barang", "Nama Barang", "Kategori", "Stock", "Harga");
+        for (int i = 0; i < trs.length; i++) {
+    
+        }
+
+    }
     void searching(Scanner sc) {
         System.out.println("Cari Nama Pembeli: ");
         String nama = sc.nextLine();
