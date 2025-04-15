@@ -24,36 +24,31 @@ public class MainSistem {
         serviceClass.tambahDataTransaksi(trp4);
         serviceClass.tambahDataTransaksi(trp5);
 
+        while (true) {
+        System.out.println("================= TOKO Manasuka TOKO =================");
+        System.out.println("1. Data Barang");
+        System.out.println("2. Data Transaksi");
+        System.out.println("3. Pencarian Data");
+        System.out.println("4. Pengurutan Data");
+        System.out.println("5. exit");
+        System.out.print("Choose Menu (1-5): ");
+        int menu = sc.nextInt();
+        sc.nextLine();
+
+        if (menu == 1) {
         serviceClass.showBarang();
+        } else if (menu == 2) {
+        serviceClass.showTransaksi();
+        } else if (menu == 3) {
+        serviceClass.searching(sc);
+        } else if (menu == 4) {
 
-        // while (true) {
-        // System.out.println("================= TOKO Manasuka TOKO =================");
-        // System.out.println("1. Data Barang");
-        // System.out.println("2. Data Transaksi");
-        // System.out.println("3. Pencarian Data");
-        // System.out.println("4. Pengurutan Data");
-        // System.out.println("5. exit");
-        // System.out.print("Choose Menu (1-5): ");
-        // int menu = sc.nextInt();
-
-        // if (menu == 1) {
-        // serviceClass.showBarang();
-        // }
-
-        // // if (menu == 1) {
-        // // serviceClass.searching(sc);
-        // // } else if (menu == 2) {
-
-        // // } else if (menu == 3) {
-        // // serviceClass.searching(sc);
-        // // } else if (menu == 4) {
-
-        // // } else if (menu == 5) {
-        // // System.out.println("Keluar Program");
-        // // break;
-        // // } else {
-        // // System.out.println("Input tidak valid!");
-        // // }
-        // }
+        } else if (menu == 5) {
+        System.out.println("Keluar Program");
+        break;
+        } else {
+        System.out.println("Input tidak valid!");
+        }
+        }
     }
 }
