@@ -3,9 +3,7 @@ import java.util.Scanner;
 
 public class ServiceClass {
     TransaksiPembelian[] trs = new TransaksiPembelian[5];
-    Barang[] brg = new Barang[5];
     int index = 0;
-    int indexBrg = 0;
 
     void tambahDataTransaksi(TransaksiPembelian trP) {
         if (index < trs.length) {
@@ -15,15 +13,6 @@ public class ServiceClass {
             System.out.println("Data Penuh!");
         }
     }
-
-    // void tambahBarang(BranchInstruction brg) {
-    // if (index < brg.length) {
-    // brg[index] = trP;
-    // index++;
-    // } else {
-    // System.out.println("Data Penuh!");
-    // }
-    // }
 
     void showBarang() {
         System.out.printf("%-20s %-20s %-20s %-20s %-20s", "Kode Barang", "Nama Barang", "Kategori", "Stock", "Harga");
@@ -35,17 +24,17 @@ public class ServiceClass {
     }
 
     void showTransaksi() {
-        System.out.printf("%-20s %-20s %-20s %-20s %-20s %-20s", "Kode Transaksi", "Nama Pembeli", "Tanggal Pembelian", "Nama Barang", "Kuantitas", "Harga");
+        System.out.printf("%-20s %-20s %-20s %-20s %-20s %-20s", "Kode Transaksi", "Nama Pembeli", "Tanggal Pembelian",
+                "Nama Barang", "Kuantitas", "Harga");
         System.out.println();
         for (int i = 0; i < trs.length; i++) {
             trs[i].tampilDataTransaksi();
             System.out.println();
         }
     }
-    
 
     void searching(Scanner sc) {
-        System.out.println("Cari Nama Pembeli: ");
+        System.out.print("Cari Nama Pembeli: ");
         String nama = sc.nextLine();
 
         int indexFound = -1;
@@ -68,7 +57,9 @@ public class ServiceClass {
         for (int i = 0; i < trs.length - 1; i++) {
             for (int j = 1; j < trs.length - i; j++) {
                 if (trs[j - 1].namaPembeli.compareToIgnoreCase(trs[j].namaPembeli) > 0) {
-                    // TransaksiPembelian temp = trs[]
+                    TransaksiPembelian temp = trs[j - 1];
+                    trs[j - 1] = trs[j];
+                    trs[j] = temp;
                 }
             }
         }
