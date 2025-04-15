@@ -34,12 +34,21 @@ public class MainSistem {
             System.out.print("Choose Menu (1-5): ");
             int menu = sc.nextInt();
             sc.nextLine();
-                    
-           if(menu == 1){
 
-           } else if(menu == 3) {
+            if (menu == 1) {
                 serviceClass.searching(sc);
-           }
+            } else if (menu == 2) {
+
+            } else if (menu == 3) {
+                serviceClass.searching(sc);
+            } else if (menu == 4) {
+
+            } else if (menu == 5) {
+                System.out.println("Keluar Program");
+                break;
+            } else {
+                System.out.println("Input tidak valid!");
+            }
         }
     }
 }
