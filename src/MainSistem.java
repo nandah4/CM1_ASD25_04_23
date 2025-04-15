@@ -13,6 +13,31 @@ public class MainSistem {
         while (true) {
             System.out.println("================= TOKO Manasuka TOKO =================");
             System.out.println("1. Data Barang");
+            System.out.println("2. Data Transaksi");
+            System.out.println("3. Pencarian Data");
+            System.out.println("4. Pengurutan Data");
+            System.out.println("5. exit");
+            System.out.print("Chose Menu(1-6): ");
+            int menu = sc.nextInt();
+            sc.nextLine();
+
+            switch (menu) {
+                case 1:
+                    
+                    break;
+                case 2:
+
+                    break;
+                case 3:
+
+                    break;
+                case 4:
+
+                    break;
+                case 5:
+
+                    break;
+            }
         }
     }
 }
