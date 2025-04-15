@@ -16,6 +16,14 @@ public class MainSistem {
         TransaksiPembelian trp4 = new TransaksiPembelian("Tr004", "MeiMei", "23-04-2024", 1, brg4);
         TransaksiPembelian trp5 = new TransaksiPembelian("Tr005", "Ihsan", "24-04-2024", 1, brg5);
 
+        ServiceClass serviceClass = new ServiceClass()
+
+        serviceClass.tambahDataTransaksi(trp1);
+        serviceClass.tambahDataTransaksi(trp2);
+        serviceClass.tambahDataTransaksi(trp3);
+        serviceClass.tambahDataTransaksi(trp4);
+        serviceClass.tambahDataTransaksi(trp5);
+
         while (true) {
             System.out.println("================= TOKO Manasuka TOKO =================");
             System.out.println("1. Data Barang");
@@ -23,16 +31,16 @@ public class MainSistem {
             System.out.println("3. Pencarian Data");
             System.out.println("4. Pengurutan Data");
             System.out.println("5. exit");
-            System.out.print("Chose Menu(1-6): ");
-            int menu = sc.nextInt();
-            sc.nextLine();
+            System.out.print("Choose Menu (1-5): ");
+            int menu = 
 
+                    
             switch (menu) {
                 case 1:
                     
                     break;
                 case 2:
-
+                    serviceClass.searching(sc);
                     break;
                 case 3:
 
@@ -41,8 +49,8 @@ public class MainSistem {
 
                     break;
                 case 5:
-
-                    break;
+                System.out.print("Kode Program Berhenti");
+                    return;
             }
         }
     }
