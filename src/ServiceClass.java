@@ -1,4 +1,4 @@
-import java.lang.classfile.instruction.BranchInstruction;
+
 import java.util.Scanner;
 
 public class ServiceClass {
@@ -27,10 +27,11 @@ public class ServiceClass {
 
     void showBarang() {
         System.out.printf("%-20s %-20s %-20s %-20d %-20d", "Kode Barang", "Nama Barang", "Kategori", "Stock", "Harga");
+        System.out.println();
         for (int i = 0; i < trs.length; i++) {
             trs[i].brg.tampilDataBarang();
+            System.out.println();
         }
-
     }
 
     void searching(Scanner sc) {
