@@ -47,7 +47,7 @@ public class ServiceClass {
         }
 
         if (indexFound >= 0) {
-            System.out.println("Data ditemukan di index - " + indexFound);
+            System.out.println("Data ditemukan di index : " + indexFound);
         } else {
             System.out.println("Data tidak ditemukan");
         }
